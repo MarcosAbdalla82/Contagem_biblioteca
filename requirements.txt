@@ -1,5 +1,4 @@
-pandas
 streamlit
-datetime
-base64
-psycopg2
+pandas
+requests
+openpyxl
