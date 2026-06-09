@@ -79,7 +79,7 @@ else:
 
     with col_b:
         st.subheader("🗂️ Todos os registros")
-        st.dataframe(df['id','entrada_em','data'], use_container_width=True)
+        st.dataframe(df[["id", "entrada_em", "data"]], use_container_width=True)
 
     # ── Download Excel ───────────────────────────────
     st.divider()
