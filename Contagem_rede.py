@@ -39,7 +39,7 @@ def gerar_excel(df, resumo):
 # ── Interface Streamlit ──────────────────────────────
 st.set_page_config(page_title="Contador de Visitas", page_icon="🏪", layout="wide")
 
-st.title("🏪 Contador de Visitas da Loja")
+st.title("🏪 Contador de Visitas da Biblioteca")
 st.caption(f"Atualizado automaticamente a cada 30 segundos")
 
 # Botão de atualização manual
