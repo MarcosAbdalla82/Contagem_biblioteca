@@ -83,7 +83,7 @@ else:
 
     # ── Download Excel ───────────────────────────────
     st.divider()
-    excel = gerar_excel(df, resumo)
+    excel = gerar_excel(df[["id", "entrada_em", "data"]], resumo)
     st.download_button(
         label="⬇️ Baixar planilha Excel",
         data=excel,
