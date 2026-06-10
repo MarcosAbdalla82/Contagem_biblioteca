@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 from datetime import datetime
+import pytz
 import io
 
 # ── Configurações via Secrets ────────────────────────
@@ -54,13 +55,15 @@ else:
     resumo = resumo_por_dia(df)
 
     # ── Métricas no topo ─────────────────────────────
-    hoje = datetime.now().date()
+    fuso_brasilia = pytz.timezone("America/Sao_Paulo")
+    hoje          = datetime.now(fuso_brasilia).date()
+
     visitas_hoje = resumo[resumo["data"] == hoje]["total_visitas"].sum()
     total_geral  = len(df)
 
     col1, col2, col3 = st.columns(3)
-    col1.metric("📅 Visitas hoje",  visitas_hoje)
-    col2.metric("📊 Total geral",   total_geral)
+    col1.metric("📅 Visitas hoje",     visitas_hoje)
+    col2.metric("📊 Total geral",      total_geral)
     col3.metric("📆 Dias registrados", len(resumo))
 
     st.divider()
