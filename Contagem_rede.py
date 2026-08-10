@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 import pytz
 import io
-# __ NADA ____ ALTERADO_____
+# __ NADA ____ ALTERADO_____!!!
 # ── Configurações via Secrets ────────────────────────
 SUPABASE_URL    = st.secrets["SUPABASE_URL"]
 SUPABASE_APIKEY = st.secrets["SUPABASE_APIKEY"]
